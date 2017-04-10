@@ -20,7 +20,7 @@ import org.springframework.web.client.RestTemplate;
 import com.accenture.employee.timerecords.business.vo.DayAttendance;
 import com.accenture.employee.timerecords.business.vo.Employee;
 import com.accenture.employee.timerecords.business.vo.TimeRecord;
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+//import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 
 
