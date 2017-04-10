@@ -48,7 +48,7 @@ public class TimeRecordsCalculator{
 	 * @param employeeId
 	 * @return Timerecords
 	 */
-	@HystrixCommand(fallbackMethod = "employeeServiceFalut")
+//	@HystrixCommand(fallbackMethod = "employeeServiceFalut")
 	public TimeRecord getTimeRecordsForanEmployee(Integer employeeId){
 		log.info("Inside getTimeRecordsForanEmployee method:::: " + employeeId);
 		log.info("employeeDetailsURL ::" + employeeDetailsURL);

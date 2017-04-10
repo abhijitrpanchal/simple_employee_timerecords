@@ -12,12 +12,12 @@ import org.springframework.stereotype.Service;
 
 //@SpringBootApplication
 @SpringBootApplication(scanBasePackages = { "com.accenture.employee" })
-@EnableDiscoveryClient
-@EnableCircuitBreaker
-@EnableHystrixDashboard 
+//@EnableDiscoveryClient
+//@EnableCircuitBreaker
+//@EnableHystrixDashboard 
 @Component
 @Service
-@EnableAutoConfiguration
+//@EnableAutoConfiguration
 
 public class EmpTimerecordsApplication {
 
