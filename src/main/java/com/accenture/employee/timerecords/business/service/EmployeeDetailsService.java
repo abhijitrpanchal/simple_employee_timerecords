@@ -18,6 +18,7 @@ import com.accenture.employee.timerecords.business.vo.Employee;
 
 
 @SpringBootApplication
+@Service
 //@FeignClient(name = "EMPLOYEEDETAILS")
 public interface EmployeeDetailsService {
 	/**
@@ -25,6 +26,6 @@ public interface EmployeeDetailsService {
 	 * @param id
 	 * @return Employee
 	 */
-	@RequestMapping(value = "/employees/{empId}",method = RequestMethod.GET)
-	public Employee getEmployeeDetails(@PathVariable ("empId") long id);
+	@RequestMapping(value = "/employees/{employeeId}",method = RequestMethod.GET)
+	public Employee getEmployeeDetails(@PathVariable ("employeeId") String id);
 }
