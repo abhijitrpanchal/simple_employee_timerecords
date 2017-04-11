@@ -18,7 +18,7 @@ import com.accenture.employee.timerecords.business.vo.Employee;
 
 
 @SpringBootApplication
-@Service
+//@Service
 //@FeignClient(name = "EMPLOYEEDETAILS")
 public interface EmployeeDetailsService {
 	/**
