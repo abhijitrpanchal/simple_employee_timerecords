@@ -54,7 +54,8 @@ public class TimeRecordsCalculator{
 		log.info("employeeDetailsURL ::" + employeeDetailsURL);
 		Employee employeeNull = new Employee();
 		TimeRecord timerecord = new TimeRecord();
-		Employee emp =  restTemplate.getForObject("http://simple-emp-details-leanarchitecturedemo.cloudapps.test.openshift.opentlc.com/employees/1", Employee.class);
+//		Employee emp =  restTemplate.getForObject("http://simple-emp-details-leanarchitecturedemo.cloudapps.test.openshift.opentlc.com/employees/1", Employee.class);
+		Employee emp =  restTemplate.getForObject(employeeDetailsURL, Employee.class);
 		log.info("Employee details: "+emp.toString());
 		if(emp.getEmployeeId()== employeeId){
 			timerecord = timeRecordsEntityUtility.getEmployeeTimeRecord(employeeId);
