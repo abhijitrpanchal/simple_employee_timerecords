@@ -37,7 +37,7 @@ public class TimeRecordsEntityUtility {
 */
 		log.info("Inside method : getEmployeeTimeRecord");
 		log.info("employeeId : " + employeeId);
-		return timerecordsrepository.getEmployeeTimeRecord(employeeId);
+		return timerecordsrepository.getEmployeeTimeRecord(1);
 	}
 
 }
