@@ -37,7 +37,7 @@ public class TimeRecordsEntityUtility {
 		
 		dayAttendance.setEmployeeId(employee.getEmployeeId());
 		dayAttendance.setEmployeeName(employee.getEmployeeName());
-		dayAttendance.setEmployeeAddress(employee.getEmpAddress());
+		dayAttendance.setEmployeeAddress(employee.getEmployeeAddress());
 		dayAttendance.setChargeCode("ASBOS05");
 		dayAttendance.setDateStr("21-02-2017");
 		dayAttendance.setHours((Integer)9);
