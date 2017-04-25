@@ -11,11 +11,11 @@ public class Employee {
 	private Integer employeeId;
 	private String employeeName;
 	private String employeeAddress;
-	public Employee(Integer employeeId, String employeeName, String empAddress) {
+	public Employee(Integer employeeId, String employeeName, String employeeAddress) {
 		super();
 		this.employeeId = employeeId;
 		this.employeeName = employeeName;
-		this.employeeAddress = empAddress;
+		this.employeeAddress = employeeAddress;
 	}
 	public Employee() {
 		super();
@@ -32,15 +32,15 @@ public class Employee {
 	public void setEmployeeName(String employeeName) {
 		this.employeeName = employeeName;
 	}
-	public String getEmpAddress() {
+	public String getEmployeeAddress() {
 		return employeeAddress;
 	}
-	public void setEmpAddress(String empAddress) {
-		this.employeeAddress = empAddress;
+	public void setEmployeeAddress(String employeeAddress) {
+		this.employeeAddress = employeeAddress;
 	}
 	@Override
 	public String toString() {
-		return "Employee [employeeId=" + employeeId + ", employeeName=" + employeeName + ", empAddress=" + employeeAddress
+		return "Employee [employeeId=" + employeeId + ", employeeName=" + employeeName + ", employeeAddress=" + employeeAddress
 				+ "]";
 	}
 	
