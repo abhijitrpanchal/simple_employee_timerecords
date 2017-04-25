@@ -3,12 +3,16 @@
  */
 package com.accenture.employee.timerecords.business;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.accenture.employee.timerecords.business.repository.TimeRecordsRepository;
+import com.accenture.employee.timerecords.business.vo.DayAttendance;
 import com.accenture.employee.timerecords.business.vo.TimeRecord;
 
 /**
@@ -24,20 +28,21 @@ public class TimeRecordsEntityUtility {
 	private TimeRecordsRepository timerecordsrepository;
 	
 	public TimeRecord getEmployeeTimeRecord(Integer employeeId){
-		/*		TimeRecord timeRecord = new TimeRecord();
+		TimeRecord timeRecord = new TimeRecord();
 		DayAttendance dayAttendance = new DayAttendance();
 		Collection<DayAttendance> dayAttList = new ArrayList<>();
-		timeRecord.setEmployeeId(empId);
+		timeRecord.setEmployeeId(employeeId);
 		
 		dayAttendance.setChargeCode("ASBOS05");
 		dayAttendance.setDateStr("21-02-2017");
 		dayAttendance.setHours((Integer)9);
 		dayAttList.add(dayAttendance);
 		timeRecord.setEmpAttendance(dayAttList);
-*/
-		log.info("Inside method : getEmployeeTimeRecord");
+		return timeRecord;
+
+/*		log.info("Inside method : getEmployeeTimeRecord");
 		log.info("employeeId : " + employeeId);
-		return timerecordsrepository.getEmployeeTimeRecord(1);
+		return timerecordsrepository.getEmployeeTimeRecord(1);*/
 	}
 
 }
