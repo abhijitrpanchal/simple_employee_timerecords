@@ -33,6 +33,7 @@ public class TimeRecordsEntityUtility {
 		Collection<DayAttendance> dayAttList = new ArrayList<>();
 		timeRecord.setEmployeeId(employeeId);
 		
+		dayAttendance.setEmployeeId(employeeId);;
 		dayAttendance.setChargeCode("ASBOS05");
 		dayAttendance.setDateStr("21-02-2017");
 		dayAttendance.setHours((Integer)9);
