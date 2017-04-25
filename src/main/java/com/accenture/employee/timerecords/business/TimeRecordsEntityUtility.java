@@ -13,6 +13,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.accenture.employee.timerecords.business.repository.TimeRecordsRepository;
 import com.accenture.employee.timerecords.business.vo.DayAttendance;
+import com.accenture.employee.timerecords.business.vo.Employee;
 import com.accenture.employee.timerecords.business.vo.TimeRecord;
 
 /**
@@ -27,13 +28,16 @@ public class TimeRecordsEntityUtility {
 	@Autowired
 	private TimeRecordsRepository timerecordsrepository;
 	
-	public TimeRecord getEmployeeTimeRecord(Integer employeeId){
+//	public TimeRecord getEmployeeTimeRecord(Integer employeeId){
+	public TimeRecord getEmployeeTimeRecord(Employee employee){
 		TimeRecord timeRecord = new TimeRecord();
 		DayAttendance dayAttendance = new DayAttendance();
 		Collection<DayAttendance> dayAttList = new ArrayList<>();
-		timeRecord.setEmployeeId(employeeId);
+		timeRecord.setEmployeeId(employee.getEmployeeId());
 		
-		dayAttendance.setEmployeeId(employeeId);;
+		dayAttendance.setEmployeeId(employee.getEmployeeId());
+		dayAttendance.setEmployeeName(employee.getEmployeeName());
+		dayAttendance.setEmployeeAddress(employee.getEmpAddress());
 		dayAttendance.setChargeCode("ASBOS05");
 		dayAttendance.setDateStr("21-02-2017");
 		dayAttendance.setHours((Integer)9);

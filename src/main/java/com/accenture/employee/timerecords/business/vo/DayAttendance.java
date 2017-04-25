@@ -15,6 +15,8 @@ public class DayAttendance {
 
 	@Id
 	private Integer employeeId;
+	private String employeeName;
+	private String employeeAddress;
 	
 	private String dateStr;
 	private String chargeCode;
@@ -34,6 +36,20 @@ public class DayAttendance {
 	}
 	public void setEmployeeId(Integer employeeId) {
 		this.employeeId = employeeId;
+	}
+	
+
+	public String getEmployeeName() {
+		return employeeName;
+	}
+	public void setEmployeeName(String employeeName) {
+		this.employeeName = employeeName;
+	}
+	public String getEmployeeAddress() {
+		return employeeAddress;
+	}
+	public void setEmployeeAddress(String employeeAddress) {
+		this.employeeAddress = employeeAddress;
 	}
 	public String getDateStr() {
 		return dateStr;
