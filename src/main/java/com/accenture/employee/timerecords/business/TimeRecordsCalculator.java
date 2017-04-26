@@ -69,7 +69,7 @@ public class TimeRecordsCalculator{
 	 * @param employeeId
 	 * @return TimeRecord
 	 */
-	public TimeRecord employeeServiceFalut(Integer employeeId){
+/*	public TimeRecord employeeServiceFalut(Integer employeeId){
 		TimeRecord timeRecords = new TimeRecord();
 		DayAttendance da = new DayAttendance();
 		da.setChargeCode(null);
@@ -81,5 +81,5 @@ public class TimeRecordsCalculator{
 		timeRecords.setEmployeeId(null);
 		return timeRecords;
 	}
-
+*/
 }
