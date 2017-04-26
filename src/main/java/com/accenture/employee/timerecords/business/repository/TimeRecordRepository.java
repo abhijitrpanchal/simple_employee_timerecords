@@ -5,9 +5,9 @@ import org.springframework.data.mongodb.repository.Query;
 
 import com.accenture.employee.timerecords.business.vo.TimeRecord;
 
-public interface TimeRecordsRepository extends MongoRepository<TimeRecord, Integer>{
+public interface TimeRecordRepository extends MongoRepository<TimeRecord, Integer>{
 		
-	@Query ("{employeeId : ?0}") 
-	public TimeRecord getEmployeeTimeRecord(Integer empId);
+	 
+	public TimeRecord findByEmployeeId(Integer empId);
 
 }
