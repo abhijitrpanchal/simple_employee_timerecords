@@ -28,8 +28,8 @@ public class TimeRecordsEntityUtility {
 	@Autowired
 	private TimeRecordsRepository timerecordsrepository;
 	
-//	public TimeRecord getEmployeeTimeRecord(Integer employeeId){
-	public TimeRecord getEmployeeTimeRecord(Employee employee){
+	public TimeRecord getEmployeeTimeRecord(Integer employeeId){
+/*	public TimeRecord getEmployeeTimeRecord(Employee employee){
 		TimeRecord timeRecord = new TimeRecord();
 		DayAttendance dayAttendance = new DayAttendance();
 		Collection<DayAttendance> dayAttList = new ArrayList<>();
@@ -43,11 +43,11 @@ public class TimeRecordsEntityUtility {
 		dayAttendance.setHours((Integer)9);
 		dayAttList.add(dayAttendance);
 		timeRecord.setEmpAttendance(dayAttList);
-		return timeRecord;
+		return timeRecord;*/
 
-/*		log.info("Inside method : getEmployeeTimeRecord");
+		log.info("Inside method : getEmployeeTimeRecord");
 		log.info("employeeId : " + employeeId);
-		return timerecordsrepository.getEmployeeTimeRecord(1);*/
+		return timerecordsrepository.getEmployeeTimeRecord(1);
 	}
 
 }

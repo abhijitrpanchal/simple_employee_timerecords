@@ -57,8 +57,8 @@ public class TimeRecordsCalculator{
 		Employee emp =  restTemplate.getForObject(employeeDetailsURL+employeeId, Employee.class);
 		log.info("Employee details: "+emp.toString());
 		if(emp.getEmployeeId()== employeeId){
-			//timerecord = timeRecordsEntityUtility.getEmployeeTimeRecord(employeeId);
-			timerecord = timeRecordsEntityUtility.getEmployeeTimeRecord(emp);
+			timerecord = timeRecordsEntityUtility.getEmployeeTimeRecord(employeeId);
+			//timerecord = timeRecordsEntityUtility.getEmployeeTimeRecord(emp);
 		}
 		return timerecord;
 	}
