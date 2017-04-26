@@ -32,6 +32,7 @@ public class TimerecordsController {
 	@RequestMapping(value="/timerecords/{empId}", method = RequestMethod.GET)
 	public List<TimeRecord> getEmployeeTimerecords(@PathVariable("empId") Integer id){
 		List<TimeRecord> timeRecord = this.timerecordsCalculator.getTimeRecordsForanEmployee(id);
+		System.out.println("List of TimeRecords :" + timeRecord);
 		return timeRecord;
 	}
 
