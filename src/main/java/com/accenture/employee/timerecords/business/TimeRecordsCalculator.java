@@ -6,6 +6,7 @@ package com.accenture.employee.timerecords.business;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -49,11 +50,11 @@ public class TimeRecordsCalculator{
 	 * @return Timerecords
 	 */
 //	@HystrixCommand(fallbackMethod = "employeeServiceFalut")
-	public TimeRecord getTimeRecordsForanEmployee(Integer employeeId){
+	public List<TimeRecord> getTimeRecordsForanEmployee(Integer employeeId){
 		log.info("Inside getTimeRecordsForanEmployee method:::: " + employeeId);
 		log.info("employeeDetailsURL ::" + employeeDetailsURL);
 		Employee employeeNull = new Employee();
-		TimeRecord timerecord = new TimeRecord();
+		List<TimeRecord> timerecord = new ArrayList();
 		Employee emp =  restTemplate.getForObject(employeeDetailsURL+employeeId, Employee.class);
 		log.info("Employee details: "+emp.toString());
 		if(emp.getEmployeeId()== employeeId){

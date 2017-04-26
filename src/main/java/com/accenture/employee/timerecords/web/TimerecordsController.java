@@ -4,6 +4,8 @@
 package com.accenture.employee.timerecords.web;
 
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -28,8 +30,8 @@ public class TimerecordsController {
 	
 	
 	@RequestMapping(value="/timerecords/{empId}", method = RequestMethod.GET)
-	public TimeRecord getEmployeeTimerecords(@PathVariable("empId") Integer id){
-		TimeRecord timeRecord = this.timerecordsCalculator.getTimeRecordsForanEmployee(id);
+	public List<TimeRecord> getEmployeeTimerecords(@PathVariable("empId") Integer id){
+		List<TimeRecord> timeRecord = this.timerecordsCalculator.getTimeRecordsForanEmployee(id);
 		return timeRecord;
 	}
 

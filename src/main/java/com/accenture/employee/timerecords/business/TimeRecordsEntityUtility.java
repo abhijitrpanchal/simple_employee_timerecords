@@ -3,6 +3,8 @@
  */
 package com.accenture.employee.timerecords.business;
 
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +25,7 @@ public class TimeRecordsEntityUtility {
 	@Autowired
 	private TimeRecordRepository timerecordrepository;
 	
-	public TimeRecord getEmployeeTimeRecord(Integer employeeId){
+	public List<TimeRecord> getEmployeeTimeRecord(Integer employeeId){
 /*	public TimeRecord getEmployeeTimeRecord(Employee employee){
 		TimeRecord timeRecord = new TimeRecord();
 		DayAttendance dayAttendance = new DayAttendance();
