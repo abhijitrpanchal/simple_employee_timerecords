@@ -10,6 +10,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import com.accenture.employee.timerecords.business.repository.DayAttendanceRepository;
 import com.accenture.employee.timerecords.business.repository.TimeRecordRepository;
 import com.accenture.employee.timerecords.business.vo.TimeRecord;
 
@@ -23,7 +24,7 @@ public class TimeRecordsEntityUtility {
 	public static final Logger log = LoggerFactory.getLogger(TimeRecordsEntityUtility.class);
 
 	@Autowired
-	private TimeRecordRepository timerecordrepository;
+	private DayAttendanceRepository dayattendancerepository;
 	
 	public List<TimeRecord> getEmployeeTimeRecord(Integer employeeId){
 /*	public TimeRecord getEmployeeTimeRecord(Employee employee){
@@ -44,7 +45,7 @@ public class TimeRecordsEntityUtility {
 
 		log.info("Inside method : getEmployeeTimeRecord");
 		log.info("employeeId : " + employeeId);
-		return timerecordrepository.findByEmployeeId(employeeId);
+		return dayattendancerepository.findByEmployeeId(employeeId);
 	}
 
 }

@@ -3,6 +3,7 @@
  */
 package com.accenture.employee.timerecords.business.vo;
 
+import java.math.BigInteger;
 import java.util.Collection;
 
 import org.springframework.data.annotation.Id;
@@ -12,13 +13,11 @@ import org.springframework.data.mongodb.core.mapping.Document;
  * @author j.venugopalan
  *
  */
-@Document (collection="chargecode")
+@Document (collection="dayattendance")
 public class TimeRecord {
 	
 	@Id
 	private Integer employeeId;
-	
-	@DBRef(db="DayAttendance")
 	private Collection<DayAttendance> empAttendance;
 	
 	

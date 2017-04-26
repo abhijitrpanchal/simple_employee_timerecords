@@ -3,6 +3,8 @@
  */
 package com.accenture.employee.timerecords.business.vo;
 
+import java.math.BigInteger;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -14,16 +16,14 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class DayAttendance {
 
 	@Id
-//	private Integer employeeId;
-//	private String employeeName;
-//	private String employeeAddress;
-	
+	private BigInteger id;
+	private Integer employeeId;
 	private String dateStr;
 	private String chargeCode;
 	private Integer hours;
 	public DayAttendance(Integer employeeId, String dateStr, String chargeCode, Integer hours) {
 		super();
-//		this.employeeId = employeeId;
+		this.employeeId = employeeId;
 		this.dateStr = dateStr;
 		this.chargeCode = chargeCode;
 		this.hours = hours;
@@ -31,26 +31,14 @@ public class DayAttendance {
 	public DayAttendance() {
 		super();
 	}
-/*
+
 	public Integer getEmployeeId() {
 		return employeeId;
 	}
 	public void setEmployeeId(Integer employeeId) {
 		this.employeeId = employeeId;
 	}
-	public String getEmployeeName() {
-		return employeeName;
-	}
-	public void setEmployeeName(String employeeName) {
-		this.employeeName = employeeName;
-	}
-	public String getEmployeeAddress() {
-		return employeeAddress;
-	}
-	public void setEmployeeAddress(String employeeAddress) {
-		this.employeeAddress = employeeAddress;
-	}
-*/	public String getDateStr() {
+	public String getDateStr() {
 		return dateStr;
 	}
 	public void setDateStr(String dateStr) {
