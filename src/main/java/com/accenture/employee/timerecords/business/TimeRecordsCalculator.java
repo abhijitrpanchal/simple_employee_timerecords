@@ -57,11 +57,9 @@ public class TimeRecordsCalculator{
 		List<TimeRecord> timerecord = new ArrayList();
 		Employee emp =  restTemplate.getForObject(employeeDetailsURL+employeeId, Employee.class);
 		log.info("Employee details: "+emp.toString());
-		if(emp.getEmployeeId()!= employeeId){
+		if(emp.getEmployeeId() == employeeId){
 			System.out.println("In side if condition");
 			timerecord = timeRecordsEntityUtility.getEmployeeTimeRecord(employeeId);
-		}else{
-			throw new RuntimeException();
 		}
 		
 		return timerecord;
