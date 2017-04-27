@@ -21,7 +21,7 @@ import org.springframework.web.client.RestTemplate;
 import com.accenture.employee.timerecords.business.vo.DayAttendance;
 import com.accenture.employee.timerecords.business.vo.Employee;
 import com.accenture.employee.timerecords.business.vo.TimeRecord;
-//import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 
 
@@ -49,7 +49,7 @@ public class TimeRecordsCalculator{
 	 * @param employeeId
 	 * @return Timerecords
 	 */
-//	@HystrixCommand(fallbackMethod = "employeeServiceFalut")
+	@HystrixCommand(fallbackMethod = "employeeServiceFalut")
 	public List<TimeRecord> getTimeRecordsForanEmployee(Integer employeeId){
 		log.info("Inside getTimeRecordsForanEmployee method:::: " + employeeId);
 		log.info("employeeDetailsURL ::" + employeeDetailsURL);
@@ -69,17 +69,14 @@ public class TimeRecordsCalculator{
 	 * @param employeeId
 	 * @return TimeRecord
 	 */
-/*	public TimeRecord employeeServiceFalut(Integer employeeId){
+	public TimeRecord employeeServiceFalut(Integer employeeId){
+		log.info("Inside employeeServiceFalut Method");
 		TimeRecord timeRecords = new TimeRecord();
-		DayAttendance da = new DayAttendance();
-		da.setChargeCode(null);
-		da.setDateStr(null);
-		da.setHours(0);
-		Collection<DayAttendance> daList = new ArrayList<>();
-		daList.add(da);
-		timeRecords.setEmpAttendance(daList);
+		timeRecords.setChargeCode(null);
+		timeRecords.setDateStr(null);
+		timeRecords.setHours(0);
 		timeRecords.setEmployeeId(null);
 		return timeRecords;
 	}
-*/
+
 }
