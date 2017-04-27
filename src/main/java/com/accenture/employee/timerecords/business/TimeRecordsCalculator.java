@@ -71,14 +71,16 @@ public class TimeRecordsCalculator{
 	 * @param employeeId
 	 * @return TimeRecord
 	 */
-	public TimeRecord employeeServiceFalut(Integer employeeId){
+	public List<TimeRecord> employeeServiceFalut(Integer employeeId){
 		log.info("Inside employeeServiceFalut Method");
+		List<TimeRecord> lstTimeRecords = new ArrayList();
 		TimeRecord timeRecords = new TimeRecord();
 		timeRecords.setChargeCode(null);
 		timeRecords.setDateStr(null);
 		timeRecords.setHours(0);
 		timeRecords.setEmployeeId(null);
-		return timeRecords;
+		lstTimeRecords.add(timeRecords);
+		return lstTimeRecords;
 	}
 
 }
