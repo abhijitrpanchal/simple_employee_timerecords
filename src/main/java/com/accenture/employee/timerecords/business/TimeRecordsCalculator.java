@@ -60,8 +60,10 @@ public class TimeRecordsCalculator{
 		if(emp.getEmployeeId()== employeeId){
 			System.out.println("In side if condition");
 			timerecord = timeRecordsEntityUtility.getEmployeeTimeRecord(employeeId);
-			//timerecord = timeRecordsEntityUtility.getEmployeeTimeRecord(emp);
+		}else{
+			throw new RuntimeException();
 		}
+		
 		return timerecord;
 	}
 	/**
