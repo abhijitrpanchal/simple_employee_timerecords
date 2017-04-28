@@ -5,7 +5,6 @@ package com.accenture.employee.timerecords.business;
 
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -18,7 +17,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import com.accenture.employee.timerecords.business.vo.DayAttendance;
 import com.accenture.employee.timerecords.business.vo.Employee;
 import com.accenture.employee.timerecords.business.vo.TimeRecord;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
