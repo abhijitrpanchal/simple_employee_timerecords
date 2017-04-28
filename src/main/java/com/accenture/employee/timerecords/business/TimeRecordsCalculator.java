@@ -71,10 +71,10 @@ public class TimeRecordsCalculator{
 		log.info("Inside employeeServiceFalut Method");
 		List<TimeRecord> lstTimeRecords = new ArrayList();
 		TimeRecord timeRecords = new TimeRecord();
-		timeRecords.setChargeCode(null);
-		timeRecords.setDateStr(null);
+		timeRecords.setChargeCode("No ChargeCode [FallBack]");
+		timeRecords.setDateStr("No Date [FallBack]");
 		timeRecords.setHours(0);
-		timeRecords.setEmployeeId(null);
+		timeRecords.setEmployeeId(0);
 		lstTimeRecords.add(timeRecords);
 		return lstTimeRecords;
 	}
