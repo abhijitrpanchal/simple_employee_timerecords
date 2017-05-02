@@ -2,7 +2,3 @@ spring:
   application:
     name: TIMERECORDS
 
-turbine:
-  aggregator:
-    clusterConfig: SIMPLE-TIMES-RECORDS
-  appConfig: SIMPLE-TIMES-RECORDS    
