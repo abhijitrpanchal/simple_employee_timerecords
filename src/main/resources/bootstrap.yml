@@ -1,3 +1,7 @@
 spring:
   application:
     name: TIMERECORDS
+turbine:
+  aggregator:
+    clusterConfig: TIMERECORDS
+  appConfig: timerecords
