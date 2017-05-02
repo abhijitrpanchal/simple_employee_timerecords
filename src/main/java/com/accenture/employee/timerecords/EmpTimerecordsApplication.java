@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 @SpringBootApplication(scanBasePackages = { "com.accenture.employee" })
 //@EnableDiscoveryClient
 @EnableCircuitBreaker
-@EnableTurbine
+//@EnableTurbine
 @EnableHystrixDashboard 
 @Component
 @Service
