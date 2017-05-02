@@ -63,6 +63,17 @@
 	        <artifactId>spring-cloud-starter-hystrix-dashboard</artifactId>
 	        <version>1.3.0.RELEASE</version>
 	    </dependency>
+	    <dependency>
+		    <groupId>org.springframework.cloud</groupId>
+		    <artifactId>spring-cloud-starter-turbine</artifactId>
+		    <exclusions>
+		        <exclusion>
+		            <groupId>javax.servlet</groupId>
+		            <artifactId>servlet-api</artifactId>
+		        </exclusion>
+		    </exclusions>
+	        <version>1.3.0.RELEASE</version>
+		</dependency>
   <!--  	 <dependency>
     	 	<groupId>org.springframework.boot</groupId>
     	 	<artifactId>spring-boot-devtools</artifactId>
