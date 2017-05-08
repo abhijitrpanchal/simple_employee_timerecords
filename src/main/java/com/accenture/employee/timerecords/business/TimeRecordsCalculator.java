@@ -30,7 +30,6 @@ import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 @SpringBootApplication
 @Service
-@Component
 public class TimeRecordsCalculator{
 	
 	public static final Logger log = LoggerFactory.getLogger(TimeRecordsCalculator.class);

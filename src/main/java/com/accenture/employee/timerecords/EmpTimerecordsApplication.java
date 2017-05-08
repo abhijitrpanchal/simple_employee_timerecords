@@ -9,7 +9,7 @@ import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboar
 //import org.springframework.cloud.netflix.turbine.EnableTurbine;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
-//import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 //@SpringBootApplication
 @SpringBootApplication(scanBasePackages = { "com.accenture.employee" })
@@ -18,7 +18,7 @@ import org.springframework.stereotype.Service;
 //@EnableTurbine
 @EnableHystrix
 @EnableHystrixDashboard 
-@Component
+//@Component
 @Service
 @EnableAutoConfiguration
 
