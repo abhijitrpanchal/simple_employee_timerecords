@@ -1,3 +1,8 @@
 spring:
   application:
     name: TIMERECORDS
+    
+turbine:
+  clusterNameExpression: new String("default")
+  appConfig: SIMPLE-EMP-TIMERECORDS
+  combineHostPort: true
