@@ -13,7 +13,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 //@SpringBootApplication
 @SpringBootApplication(scanBasePackages = { "com.accenture.employee" })
-//@EnableDiscoveryClient
+@EnableDiscoveryClient
 @EnableCircuitBreaker
 //@EnableTurbine
 @EnableHystrix
