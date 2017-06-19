@@ -11,14 +11,12 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
-//@SpringBootApplication
+
 @SpringBootApplication(scanBasePackages = { "com.accenture.employee" })
 @EnableDiscoveryClient
 @EnableCircuitBreaker
-//@EnableTurbine
 @EnableHystrix
 @EnableHystrixDashboard 
-//@Component
 @Service
 @EnableAutoConfiguration
 
